@@ -17,8 +17,6 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.GCMParameterSpec;
 
-import android.security.keystore.KeyProperties;
-
 /**
  _____        _____                  _
  |  __ \      / ____|                | |
