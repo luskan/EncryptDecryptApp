@@ -61,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
             String encryptedText = binding.edTextToEncrypt.getText().toString();
             Log.d(TAG, "Decrypting: " + encryptedText);
             byte[] encryptedBytes = Base64.decode(encryptedText, Base64.DEFAULT);
-            binding.tvDecryptedText.setText(decryptor
-                        .decryptData(SAMPLE_ALIAS, encryptedBytes, encryptor.getIv()));
-
+            String decryptedText = decryptor
+                    .decryptData(SAMPLE_ALIAS, encryptedBytes, encryptor.getIv());
+            binding.tvDecryptedText.setText(decryptedText);
         } catch (UnrecoverableEntryException | NoSuchAlgorithmException | IllegalArgumentException |
                  KeyStoreException | NoSuchPaddingException | NoSuchProviderException |
                  IOException | InvalidKeyException e) {
